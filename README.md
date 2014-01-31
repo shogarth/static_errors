@@ -6,9 +6,7 @@ can be used to design the error page. This dynamic page is then saved for static
 
 # Syntax
 
-'''
-rake static_errors <options: option=value,value2>
-'''
+    rake static_errors <options: option=value,value2>
 
 | Options | Use | Default |
 | --- | --- | --- |
@@ -22,42 +20,34 @@ rake static_errors <options: option=value,value2>
 
 ## 1: Basic Operations
 
-'''
-rake static_errors errors=404
-'''
-'''
-Saving http://localhost:3000/errors/404 to public/404.html
-'''
+    rake static_errors errors=404
+
+    Saving http://localhost:3000/errors/404 to public/404.html
+
 
 ## 2: Multiple Errors
 
-'''
-rake static_errors errors=422,500
-'''
-'''
-Saving http://localhost:3000/errors/422 to public/422.html
-Saving http://localhost:3000/errors/500 to public/500.html
-'''
+    rake static_errors errors=422,500
+
+    Saving http://localhost:3000/errors/422 to public/422.html
+    Saving http://localhost:3000/errors/500 to public/500.html
+
 
 ## 3: Multiple Languages
 
-'''
-rake static_errors errors=422 languages=en-GB,de
-'''
-'''
-Saving http://localhost:3000/errors/422 to public/422.html
-Saving http://localhost:3000/errors/422?locale=en-GB to public/422.en-GB.html
-Saving http://localhost:3000/errors/422?locale=de to public/422.de.html
-'''
+    rake static_errors errors=422 languages=en-GB,de
+
+    Saving http://localhost:3000/errors/422 to public/422.html
+    Saving http://localhost:3000/errors/422?locale=en-GB to public/422.en-GB.html
+    Saving http://localhost:3000/errors/422?locale=de to public/422.de.html
+
 
 ## 4: Custom URL / Filepaths
 
-'''
-rake static_errors errors=422 path=http://mytestserver/special_errors/ destination=public/local/errors/
-'''
-'''
-Saving http://mytestserver/special_errors/422 to public/local/errors/422.html
-'''
+    rake static_errors errors=422 path=http://mytestserver/special_errors/ destination=public/local/errors/
+
+    Saving http://mytestserver/special_errors/422 to public/local/errors/422.html
+
 
 # Final Considerations
 
